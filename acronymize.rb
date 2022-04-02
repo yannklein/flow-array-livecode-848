@@ -1,26 +1,35 @@
-# First one bite the dust 
 
 # Frequently asked questions => FAQ
 
 # TDD methodology: Test Driven Development == we start be creating the tests and then code
 
+# name shortner, param = sentence (s), result = a new acryonym (s) 
+
 
 # Code
+def shortner(sentence) 
+  # turn sentence into an array, use split
+  # make empty array called
+   CAPS
+  # iterate through word 
+  # for each word take the first letter, store into CAPS array
+  # upper the whole array 
+  # join array
+  # return as a sentence 
+  return "" if sentence.class != String
 
-def acronymize(sentence) 
-    #1. break sentence into array
-    words = sentence.split(" ")
-    #2. get first letter of each word of the array
-    first_letter_array = []
-    words.each { |word| first_letter_array << word[0] }
-    #3. join the letters 
-    #4. Capitalize the letters
-    #5. return the acronymized word
-    first_letter_array.join.upcase
+  arr = sentence.split(" ")
+  caps = []
+  arr.each do |word|
+    caps.push(word[0].capitalize)
+  end
+  return caps.join
 end
 
 # Tests
-puts acronymize('Frequently Asked Questions') == 'FAQ'
-puts acronymize('') == ''
-puts acronymize('working from case') == 'WFC'
-puts acronymize('AS SOON AS POSSIBLE') == 'ASAP'
+puts shortner("Test Driven Development") == "TDD"
+puts shortner("Oh my god") == "OMG"
+puts shortner(7) == ""
+puts shortner("be right back") == "BRB"
+
+  
